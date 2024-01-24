@@ -1,0 +1,55 @@
+site_name: My Docs
+repo_url: https://github.com/my-org/repo-name
+theme:
+  name: material
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - navigation.sections
+    - navigation.indexes # Allows adding overview pages to sections, name them index.md
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+extra:
+  version:
+    provider: mike
+    default: latest
+plugins:
+  - macros:
+      include_dir: partials
+  - search
+  - spellcheck:
+      backends:
+        - symspellpy
+        - codespell:  # or nested configs
+            dictionaries: [clear, rare, informal, usage, code, names]
+      known_words: codespell/known_words.txt # Add words into this file to ignore them from spellcheck
+      ignore_code: yes
+      min_length: 3
+markdown_extensions:
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      title: On this page
