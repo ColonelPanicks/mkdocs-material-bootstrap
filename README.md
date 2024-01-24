@@ -38,7 +38,7 @@ To view the versioned documentation (managed by `mike`) run `mike serve` (note: 
 
 ## Writing Docs
 
-It's worth familiarising with the [available markdown formatting](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) supported by mkdocs. There are some specific plugins enabled/installed in `mkdocs.yml`, see that file for more info. 
+It's worth familiarising with the [default markdown formatting](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) supported by mkdocs and the [additional formatting provided by material](https://squidfunk.github.io/mkdocs-material/reference/). There are some specific plugins enabled/installed in `mkdocs.yml`, see that file for more info. 
 
 ## Deploying Docs
 
